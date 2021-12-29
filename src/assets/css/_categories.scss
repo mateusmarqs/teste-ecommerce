@@ -2,9 +2,9 @@
     @include container;
     justify-content: center;
     align-items: center;
-    padding: 60px 8vw;
+    padding: 60px 9vw;
 
-    .swiper {  
+    .swiper {
         width: 100%;
     }
 
@@ -16,14 +16,14 @@
     }
 }
 
-@media (max-width: 750px) {   
+@media (max-width: 1080px) {   
     .categories-container {
-        padding: 40px 10vw;
+        padding: 40px 9vw;
     }
 }
 
 @media (max-width: 750px) {   
     .categories-container {
-        padding: 20px 10vw;
+        padding: 20px 9vw;
     }
 }
