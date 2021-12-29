@@ -32,8 +32,6 @@ Ou se preferir, você pode abrir o arquivo index.html contido dentro da pasta ./
 
 Link para página online:
 
-~~~javascript
-https://mateusmarqs.github.io/teste-ecommerce/dist/
-~~~ 
+> Link: https://mateusmarqs.github.io/teste-ecommerce/dist/
 
 
