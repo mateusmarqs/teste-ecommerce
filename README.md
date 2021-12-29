@@ -30,6 +30,8 @@ External: http://Seu-Endereço-ip
 
 Ou se preferir, você pode abrir o arquivo index.html contido dentro da pasta ./dist
 
+## GitHub Pages
+
 Link para página online:
 
 > Link: https://mateusmarqs.github.io/teste-ecommerce/dist/
