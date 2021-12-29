@@ -30,4 +30,10 @@ External: http://Seu-Endereço-ip
 
 Ou se preferir, você pode abrir o arquivo index.html contido dentro da pasta ./dist
 
+Link para página online:
+
+~~~javascript
+https://mateusmarqs.github.io/teste-ecommerce/dist/
+~~~ 
+
 

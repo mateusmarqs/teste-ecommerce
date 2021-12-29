@@ -48,8 +48,11 @@ header {
             color: $font-color;
             margin-left: 15px;
             font-size: 20px;
-            
             transition: 0.3s;
+
+            &:hover {
+                color: $primary-color;
+            }
         }
 
         > .button-mobile {
