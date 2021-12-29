@@ -1,0 +1,38 @@
+$primary-color: #FFE4DA;
+$secondary-color: #BFC8FF;
+$font-color: #414151;
+$bg-color: #fff9f7; 
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'PT Sans', sans-serif;
+}
+
+body {
+    background-color: $bg-color;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+header, main, footer {
+    width: 100%;
+}
+
+main {
+    margin-top: 100px;
+}
+
+@mixin container() {
+    display: flex;
+    padding: 0 5vw;
+    max-width: 1620px;
+    margin-left: auto;
+    margin-right: auto;
+}
+

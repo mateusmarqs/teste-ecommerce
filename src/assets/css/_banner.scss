@@ -1,0 +1,35 @@
+.main-banner {
+  
+  .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+  .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+  &.desktop{
+    width: 100%;
+    display: block;
+  }
+
+  &.mobile{
+    width: 100%;
+    display: none;
+  }
+
+  @media (max-width: 750px) {
+    &.desktop{
+      width: 100%;
+      display: none;
+    }
+  
+    &.mobile{
+      width: 100%;
+      display: block;
+    }
+  }
+}

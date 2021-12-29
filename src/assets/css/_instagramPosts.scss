@@ -1,0 +1,118 @@
+.instagram-posts {
+    padding: 80px 0;
+
+    &-container {
+        @include container;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        
+        > a {
+            font-size: 2rem;
+            color: $font-color;
+    
+            &:hover {
+                color: black;
+            }
+        }
+    }
+}
+
+.recent-posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    img {
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .post {
+        position: relative;
+        width: 30%;
+        height: 30%;
+        min-width: 245px;
+
+        &-indented {
+            position: relative;
+            width: 30%;
+            height: 30%;
+            min-width: 245px;
+            margin-top: 80px;
+        }
+
+        &-overlay {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            padding: 25px;
+            color: $font-color;
+            background-color: transparentize($primary-color, 0.1);
+            opacity: 0;
+            transition: opacity 0.3s;
+
+            &:hover {
+                opacity: 1;
+                
+            }
+        }        
+    }
+}
+
+@media (max-width: 900px) {  
+    .instagram-posts {
+        padding: 40px 0;
+
+        &-container {
+
+            > a {
+                margin-bottom: 40px;
+
+            }
+        }
+    }
+
+    .recent-posts {
+        justify-content: center;
+    
+        .post {
+        
+            position: relative;
+            width: 80%;
+            height: 80%;
+            min-width: 245px;
+            margin-bottom: 40px;
+    
+            &-indented {
+                width: 80%;
+                height: 80%;
+                margin-top: 0px;
+                margin-bottom: 40px;
+            }
+    
+            &-overlay {
+                position: absolute;
+                display: flex;
+                align-items: center;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                padding: 25px;
+                color: $font-color;
+                background-color: transparentize($primary-color, 0.1);
+                opacity: 0;
+                transition: opacity 0.3s;
+    
+                &:hover {
+                    opacity: 1;
+                }
+            }        
+        }
+    }
+}

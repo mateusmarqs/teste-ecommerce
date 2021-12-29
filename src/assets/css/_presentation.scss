@@ -1,0 +1,133 @@
+@mixin cardLayout {
+    background-color: $secondary-color;
+    
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .text-area {
+        text-align: center;
+        padding: 25px 30px;
+        
+        > h4 {
+            margin-bottom: 10px;
+        }    
+    }
+}
+
+.presentation-bg {
+    background-color: $primary-color;
+    box-shadow: inset 0 -350px $bg-color;
+}
+
+.presentation-container {
+    @include container;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.text-presentation {
+    position: relative;
+    width: 25%;
+
+    > .text-area {
+        margin-top: 130px;
+        p, h1 {
+            margin-bottom: 30px;
+        }
+    }
+
+    > .arrow {
+        position: absolute;
+        bottom: 320px;
+        width: 40px;
+    }
+}  
+
+.presentation-banners {
+    display: grid;
+    align-items: flex-start;
+    justify-content: right;
+    width: 65%;
+    gap: 15px;
+    grid-template-areas:
+        'c1 c2'
+        'c1 c3';
+    
+    > .card {
+         &-1 {
+            @include cardLayout;
+            grid-area: c1;
+            margin-top: 130px;
+        }
+
+        &-2 {
+            @include cardLayout;
+            grid-area: c2;
+            margin-top: 50px;
+        }
+        
+        &-3 {
+            @include cardLayout;
+            grid-area: c3;
+        }
+    }
+}
+
+@media (max-width: 1080px) {
+
+    .presentation-container {
+        padding-top: 50px;
+        justify-content: center;
+    }
+     
+    .text-presentation {
+        width: 100%;
+        
+        .text-area {
+            margin-top: 0px;
+            height: auto;
+        }
+    }
+
+    .presentation-banners {
+        width: 80%;
+    }
+
+    .arrow {
+        display: none;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .presentation-container {
+        padding-bottom: 80px;
+    }
+
+    .presentation-banners {
+        width: 80%;
+        margin-top: 20px;
+        margin-bottom: 0px;
+        grid-template-areas:
+        'c1''c3''c2';
+
+        > .card {
+            &-1 {
+                margin: 0;
+            }
+
+            &-2 {
+                margin: 0;
+            }
+        }
+    }
+    
+    .presentation-bg {
+        background-color: $primary-color;
+        box-shadow: none;
+    }
+}

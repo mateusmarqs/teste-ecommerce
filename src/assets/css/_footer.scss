@@ -1,0 +1,190 @@
+@mixin footerTextConfig {
+    a {
+        font-size: 0.8rem;
+        color: $font-color;
+        &:hover {
+            color: black
+        }
+    }
+
+    h4 {
+        margin-bottom: 10px;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+}
+
+footer {
+
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 6vw;
+        max-width: 1620px;
+        margin: auto;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    @include footerTextConfig;
+
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        img {
+            width: 100px;
+            margin: 0 10px
+        }
+        
+        &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: $font-color;
+        }
+
+        &::before {
+            content: '';
+            width: 100%;
+            height: 1px;
+            background-color: $font-color;
+        }
+    }
+
+    .menu-footer-column {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+        ul {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5px 40px;
+        }
+    }
+
+    .form-search-column {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        form {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid $font-color;
+
+            > input {
+                width: 90%;
+                height: 40px;
+                border: none;
+                background-color: inherit;  
+               
+                &:focus{
+                    outline: none;
+                    box-shadow: none; 
+                }
+            }
+
+            > button {
+                min-width: 46px;
+                background-color: inherit;
+                border: none;
+                color: $font-color;
+                cursor: pointer;
+
+                &:hover {
+                    color: black;
+                }
+            }
+        }
+    }
+
+    .social-networks-column {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        li {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+                       
+            i {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 14px;
+                background-color: $primary-color;
+                border-radius: 100%;
+                width: 25px;
+                height: 25px;
+            }
+
+            > a {
+                margin-left: 5px;
+            }
+        }
+    }
+
+    .copy {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 650px) {  
+    
+    .footer-container {
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .menu-footer-column {
+            align-items: center;
+            margin-bottom: 40px;
+            width: 100%;
+
+            ul {
+                margin-top: 20px;
+                width: 80%;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                text-align: center;
+                gap: 0;
+            }
+        }
+
+        .form-search-column {
+            margin-bottom: 40px;
+            width: 100%;
+            align-items: center;
+    
+            form {
+                width: 80%;
+                border-bottom: 1px solid $font-color;
+            }
+        }
+
+        .social-networks-column {
+            width: 100%;
+            align-items: center;
+    
+            ul {
+                display: flex;
+
+                li {
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+}
